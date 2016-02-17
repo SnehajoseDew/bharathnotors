@@ -67,7 +67,13 @@ public class EmployeeEntry extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
+        jMenu14 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
@@ -155,14 +161,15 @@ public class EmployeeEntry extends javax.swing.JFrame {
         getContentPane().add(desi);
         desi.setBounds(320, 530, 330, 40);
 
-        jButton1.setText("Save");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton1.setText("SAVE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(720, 140, 110, 40);
+        jButton1.setBounds(720, 140, 110, 50);
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel10.setText("Basic_Salary");
@@ -171,14 +178,15 @@ public class EmployeeEntry extends javax.swing.JFrame {
         getContentPane().add(basic);
         basic.setBounds(320, 590, 330, 40);
 
-        jButton2.setText("Back");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton2.setText("BACK");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(720, 320, 110, 40);
+        jButton2.setBounds(730, 350, 110, 50);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel5.setText("Wages_Day");
@@ -197,7 +205,7 @@ public class EmployeeEntry extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel12.setText("yyyy-mm-dd");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(680, 280, 110, 30);
+        jLabel12.setBounds(690, 270, 110, 30);
 
         jMenu1.setText("StockEntry");
         jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -262,15 +270,57 @@ public class EmployeeEntry extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem6.setText("Billing");
+        jMenu13.setText("Bill");
+
+        jMenuItem20.setText("Spare");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem20);
+
+        jMenuItem21.setText("Motors");
+        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem21ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem21);
+
+        jMenu2.add(jMenu13);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu14.setText("Sale");
+        jMenu14.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu14.setMaximumSize(new java.awt.Dimension(65, 32767));
+
+        jMenuItem6.setText("Sale");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu14.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        jMenuItem22.setText("Service");
+        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem22ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem22);
+
+        jMenuItem23.setText("Certificate");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem23ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem23);
+
+        jMenuBar1.add(jMenu14);
 
         jMenu3.setText("StockAvailable");
         jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -572,18 +622,46 @@ public class EmployeeEntry extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Bill b=new Bill();
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        // TODO add your handling code here:
+        Billspare b=new Billspare();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
+
+    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+        // TODO add your handling code here:
+        billmotors b=new billmotors();
+        b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem21ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        Bill b=new Bill();
-        b.setVisible(true);
-        setVisible(false);
+
     }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        Sale s=new Sale();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
+        // TODO add your handling code here:
+        Service s=new Service();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem22ActionPerformed
+
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+        // TODO add your handling code here:
+
+        salescert c=new salescert();
+        c.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
@@ -798,6 +876,8 @@ public class EmployeeEntry extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu14;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -818,6 +898,10 @@ public class EmployeeEntry extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;

@@ -61,22 +61,31 @@ public class SpareParts extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        remark = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem24 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuItem26 = new javax.swing.JMenuItem();
+        jMenuItem27 = new javax.swing.JMenuItem();
+        jMenu14 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem28 = new javax.swing.JMenuItem();
+        jMenuItem25 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem29 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -103,28 +112,28 @@ public class SpareParts extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel1.setText("Part_No");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(290, 220, 80, 30);
+        jLabel1.setBounds(310, 180, 80, 30);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel2.setText("Item_Name");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(290, 290, 70, 30);
+        jLabel2.setBounds(310, 250, 70, 30);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel3.setText("Model");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(290, 360, 60, 30);
+        jLabel3.setBounds(310, 320, 60, 30);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel4.setText("In_Price");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(290, 490, 70, 30);
+        jLabel4.setBounds(310, 450, 70, 30);
         getContentPane().add(partno);
-        partno.setBounds(420, 210, 450, 40);
+        partno.setBounds(470, 170, 450, 40);
         getContentPane().add(itemname);
-        itemname.setBounds(420, 280, 450, 40);
+        itemname.setBounds(470, 240, 450, 40);
         getContentPane().add(model);
-        model.setBounds(420, 350, 450, 40);
+        model.setBounds(470, 310, 450, 40);
 
         price.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,73 +141,85 @@ public class SpareParts extends javax.swing.JFrame {
             }
         });
         getContentPane().add(price);
-        price.setBounds(420, 480, 450, 40);
+        price.setBounds(470, 450, 450, 40);
 
-        submit.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        submit.setText("Submit");
+        submit.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        submit.setText("SUBMIT");
         submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitActionPerformed(evt);
             }
         });
         getContentPane().add(submit);
-        submit.setBounds(250, 630, 130, 50);
+        submit.setBounds(1010, 250, 120, 50);
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("Back");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jButton2.setText("BACK");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(720, 630, 120, 50);
+        jButton2.setBounds(1010, 590, 120, 50);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel5.setText("MRP");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(290, 560, 70, 30);
+        jLabel5.setBounds(310, 520, 70, 30);
         getContentPane().add(mrp);
-        mrp.setBounds(420, 550, 450, 40);
+        mrp.setBounds(470, 520, 450, 40);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 102));
         jLabel6.setText("BHARATH MOTORS");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(350, 30, 320, 50);
+        jLabel6.setBounds(380, 20, 320, 50);
         getContentPane().add(qty);
-        qty.setBounds(420, 420, 450, 40);
+        qty.setBounds(470, 380, 450, 40);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel7.setText("Quantity");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(290, 420, 90, 40);
+        jLabel7.setBounds(310, 380, 90, 40);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton1.setText("Update");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton1.setText("UPDATE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(430, 630, 110, 50);
+        jButton1.setBounds(1010, 370, 120, 50);
 
         jLabel8.setText("Date");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(290, 160, 90, 20);
+        jLabel8.setBounds(310, 120, 90, 20);
         getContentPane().add(date);
-        date.setBounds(420, 154, 450, 30);
+        date.setBounds(470, 110, 450, 30);
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton3.setText("Export");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton4.setText("VIEW");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(590, 630, 100, 50);
+        getContentPane().add(jButton4);
+        jButton4.setBounds(1010, 490, 120, 50);
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel9.setText("Remark");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(310, 610, 80, 30);
+
+        remark.setColumns(20);
+        remark.setRows(5);
+        jScrollPane1.setViewportView(remark);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(470, 590, 450, 90);
 
         jMenu1.setText("StockEntry");
         jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -206,33 +227,33 @@ public class SpareParts extends javax.swing.JFrame {
 
         jMenu8.setText("Motors");
 
-        jMenuItem1.setText("Bike");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem22.setText("Bike");
+        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem22ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem1);
+        jMenu8.add(jMenuItem22);
 
-        jMenuItem2.setText("Scooty");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem23.setText("Scooty");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem23ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem2);
+        jMenu8.add(jMenuItem23);
 
         jMenu1.add(jMenu8);
 
         jMenu9.setText("Spare");
 
-        jMenuItem3.setText("Lubricants");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem24.setText("Lubricants");
+        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItem24ActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem3);
+        jMenu9.add(jMenuItem24);
 
         jMenuItem4.setText("SpareParts");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -263,15 +284,57 @@ public class SpareParts extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem6.setText("Billing");
+        jMenu13.setText("Bill");
+
+        jMenuItem26.setText("Spare");
+        jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem26ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem26);
+
+        jMenuItem27.setText("Motors");
+        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem27ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem27);
+
+        jMenu2.add(jMenu13);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu14.setText("Sale");
+        jMenu14.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu14.setMaximumSize(new java.awt.Dimension(65, 32767));
+
+        jMenuItem6.setText("Sale");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu14.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        jMenuItem28.setText("Service");
+        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem28ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem28);
+
+        jMenuItem25.setText("Certificate");
+        jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem25ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem25);
+
+        jMenuBar1.add(jMenu14);
 
         jMenu3.setText("StockAvailable");
         jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -307,13 +370,13 @@ public class SpareParts extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem13);
 
-        jMenuItem14.setText("SpareParts");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem29.setText("SpareParts");
+        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                jMenuItem29ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem14);
+        jMenu3.add(jMenuItem29);
 
         jMenuItem15.setText("Accessories");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
@@ -510,13 +573,16 @@ public class SpareParts extends javax.swing.JFrame {
          String mrp1=mrp.getText();
          String qty1=qty.getText();
          String date1=date.getText();
+         
+         String remark1=remark.getText();
           partno.setText("");
         itemname.setText("");
         model.setText("");
         qty.setText("");
         price.setText("");
         mrp.setText("");
-        String sql="insert into spareparts values('"+date1+"','"+part+"','"+name+"','"+mode+"','"+qty1+"','"+Price+"','"+mrp1+"')";
+                remark.setText("");
+        String sql="insert into spareparts values('"+date1+"','"+part+"','"+name+"','"+mode+"','"+qty1+"','"+Price+"','"+mrp1+"','"+remark1+"')";
         
          
         try {
@@ -546,23 +612,23 @@ public class SpareParts extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         Bike b=new Bike();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItem22ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
         Scooty s=new Scooty();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
         Lubricants l=new Lubricants();
         l.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItem24ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         SpareParts p=new SpareParts();
@@ -576,18 +642,45 @@ public class SpareParts extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Bill b=new Bill();
+    private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
+        // TODO add your handling code here:
+        Billspare b=new Billspare();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItem26ActionPerformed
+
+    private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
+        // TODO add your handling code here:
+        billmotors b=new billmotors();
+        b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem27ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        Bill b=new Bill();
-        b.setVisible(true);
-        setVisible(false);
     }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        Sale s=new Sale();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+        // TODO add your handling code here:
+        Service s=new Service();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
+        // TODO add your handling code here:
+
+        salescert c=new salescert();
+        c.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem25ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
@@ -603,12 +696,12 @@ public class SpareParts extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
         stockspareparts s=new stockspareparts();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_jMenuItem29ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
@@ -741,13 +834,12 @@ public class SpareParts extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu7ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        spareexcel s=new spareexcel();
+        stockspareparts s=new stockspareparts();
         s.setVisible(true);
         setVisible(false);
-        dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -789,7 +881,7 @@ public class SpareParts extends javax.swing.JFrame {
     private javax.swing.JTextField itemname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -798,10 +890,13 @@ public class SpareParts extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu14;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -811,30 +906,36 @@ public class SpareParts extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
+    private javax.swing.JMenuItem jMenuItem24;
+    private javax.swing.JMenuItem jMenuItem25;
+    private javax.swing.JMenuItem jMenuItem26;
+    private javax.swing.JMenuItem jMenuItem27;
+    private javax.swing.JMenuItem jMenuItem28;
+    private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField model;
     private javax.swing.JTextField mrp;
     private javax.swing.JTextField partno;
     private javax.swing.JTextField price;
     private javax.swing.JTextField qty;
+    private javax.swing.JTextArea remark;
     private javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
 }

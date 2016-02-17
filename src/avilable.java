@@ -24,14 +24,7 @@ public class avilable extends javax.swing.JFrame {
     /**
      * Creates new form avilable
      */
-    public void CurrentDate()
-    {
-     Calendar cal=new GregorianCalendar();
-      int mnth=cal.get(Calendar.MONTH);
-      int year=cal.get(Calendar.YEAR);
-      int day=cal.get(Calendar.DAY_OF_MONTH);
-     date.setText(day+"/"+(mnth+1)+"/"+year);
-    }
+    
     Connection con=null;
     ResultSet rs=null;
     PreparedStatement pst=null;
@@ -47,7 +40,7 @@ public class avilable extends javax.swing.JFrame {
             while(rs.next())
             {
                
-                 DLM.addElement(rs.getString(4));
+                 DLM.addElement(rs.getString(3));
             }
             List1.setModel(DLM);
         }
@@ -59,7 +52,7 @@ public class avilable extends javax.swing.JFrame {
     public avilable() {
         initComponents();
         FillList();
-        CurrentDate();
+   
     }
 
     /**
@@ -79,41 +72,52 @@ public class avilable extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         type = new javax.swing.JTextField();
-        partno = new javax.swing.JTextField();
+        cubic = new javax.swing.JTextField();
         name = new javax.swing.JTextField();
-        model = new javax.swing.JTextField();
-        chaseno = new javax.swing.JTextField();
+        eng = new javax.swing.JTextField();
+        chase = new javax.swing.JTextField();
         color = new javax.swing.JTextField();
         qty = new javax.swing.JTextField();
-        price = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        List1 = new javax.swing.JList();
         search = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         mrp = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        date = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        List1 = new javax.swing.JList();
+        room = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        remark = new javax.swing.JTextArea();
+        jLabel14 = new javax.swing.JLabel();
+        date = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem24 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuItem26 = new javax.swing.JMenuItem();
+        jMenuItem27 = new javax.swing.JMenuItem();
+        jMenu14 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem28 = new javax.swing.JMenuItem();
+        jMenuItem25 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem29 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -139,96 +143,115 @@ public class avilable extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("BHARATH MOTORS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(330, 30, 352, 36);
+        jLabel1.setBounds(330, 10, 352, 36);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel2.setText("Type");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(340, 190, 75, 26);
+        jLabel2.setBounds(350, 130, 75, 26);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        jLabel3.setText("Part_No");
+        jLabel3.setText("Cubic_Capacity");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(340, 250, 75, 21);
+        jLabel3.setBounds(350, 230, 100, 21);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel4.setText("Item_Name");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(340, 300, 75, 26);
+        jLabel4.setBounds(350, 180, 75, 26);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        jLabel5.setText("Model");
+        jLabel5.setText("Engine_No");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(340, 360, 75, 21);
+        jLabel5.setBounds(350, 280, 75, 21);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel6.setText("Chase_No");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(340, 420, 75, 26);
+        jLabel6.setBounds(350, 330, 75, 26);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel7.setText("Color");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(340, 480, 75, 21);
+        jLabel7.setBounds(350, 380, 75, 21);
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel8.setText("Quantity");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(340, 540, 75, 21);
-
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        jLabel9.setText("In_Price");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(340, 600, 75, 21);
+        jLabel8.setBounds(350, 430, 75, 21);
         getContentPane().add(type);
-        type.setBounds(460, 180, 340, 36);
-        getContentPane().add(partno);
-        partno.setBounds(460, 230, 340, 40);
+        type.setBounds(480, 120, 510, 30);
+        getContentPane().add(cubic);
+        cubic.setBounds(480, 220, 510, 30);
         getContentPane().add(name);
-        name.setBounds(460, 290, 340, 40);
-        getContentPane().add(model);
-        model.setBounds(460, 350, 340, 40);
+        name.setBounds(480, 170, 510, 30);
+        getContentPane().add(eng);
+        eng.setBounds(480, 270, 510, 30);
 
-        chaseno.addActionListener(new java.awt.event.ActionListener() {
+        chase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chasenoActionPerformed(evt);
+                chaseActionPerformed(evt);
             }
         });
-        getContentPane().add(chaseno);
-        chaseno.setBounds(460, 410, 340, 40);
+        getContentPane().add(chase);
+        chase.setBounds(480, 320, 510, 30);
         getContentPane().add(color);
-        color.setBounds(460, 470, 340, 40);
+        color.setBounds(480, 370, 510, 30);
         getContentPane().add(qty);
-        qty.setBounds(460, 530, 340, 38);
-        getContentPane().add(price);
-        price.setBounds(460, 590, 340, 40);
+        qty.setBounds(480, 420, 510, 30);
 
-        jButton1.setText("Update");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton1.setText("UPDATE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(870, 190, 88, 50);
+        jButton1.setBounds(1110, 130, 110, 50);
 
-        jButton2.setText("Delete");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton2.setText("DELETE");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(870, 390, 88, 50);
+        jButton2.setBounds(1110, 230, 110, 50);
 
-        jButton3.setText("Back");
+        jButton3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton3.setText("BACK");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(870, 570, 88, 50);
+        jButton3.setBounds(1110, 450, 110, 50);
+
+        search.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                searchKeyReleased(evt);
+            }
+        });
+        getContentPane().add(search);
+        search.setBounds(10, 230, 260, 35);
+
+        jLabel10.setText("Search");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(10, 190, 68, 29);
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel11.setText("MRP");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(350, 530, 70, 26);
+        getContentPane().add(mrp);
+        mrp.setBounds(480, 520, 510, 30);
+
+        jLabel12.setText("Date");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(350, 80, 70, 20);
 
         List1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -237,33 +260,39 @@ public class avilable extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(List1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 196, 239, 490);
+        jScrollPane2.setViewportView(jScrollPane1);
 
-        search.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                searchKeyReleased(evt);
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(10, 270, 260, 130);
+        getContentPane().add(room);
+        room.setBounds(480, 470, 510, 30);
+
+        jLabel13.setText("ExshowRoom");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(350, 480, 100, 20);
+
+        remark.setColumns(20);
+        remark.setRows(5);
+        jScrollPane3.setViewportView(remark);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(480, 580, 510, 80);
+
+        jLabel14.setText("Remark");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(350, 590, 80, 30);
+        getContentPane().add(date);
+        date.setBounds(480, 80, 510, 30);
+
+        jButton4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton4.setText("EXPORT");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(search);
-        search.setBounds(10, 150, 239, 35);
-
-        jLabel10.setText("Search");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(10, 115, 68, 29);
-
-        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        jLabel11.setText("MRP");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(340, 660, 70, 26);
-        getContentPane().add(mrp);
-        mrp.setBounds(460, 650, 340, 40);
-
-        jLabel12.setText("Date");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(340, 130, 70, 20);
-        getContentPane().add(date);
-        date.setBounds(460, 124, 340, 30);
+        getContentPane().add(jButton4);
+        jButton4.setBounds(1110, 340, 110, 50);
 
         jMenu1.setText("StockEntry");
         jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -271,33 +300,33 @@ public class avilable extends javax.swing.JFrame {
 
         jMenu8.setText("Motors");
 
-        jMenuItem1.setText("Bike");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem22.setText("Bike");
+        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem22ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem1);
+        jMenu8.add(jMenuItem22);
 
-        jMenuItem2.setText("Scooty");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem23.setText("Scooty");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem23ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem2);
+        jMenu8.add(jMenuItem23);
 
         jMenu1.add(jMenu8);
 
         jMenu9.setText("Spare");
 
-        jMenuItem3.setText("Lubricants");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem24.setText("Lubricants");
+        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItem24ActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem3);
+        jMenu9.add(jMenuItem24);
 
         jMenuItem4.setText("SpareParts");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -328,15 +357,57 @@ public class avilable extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem6.setText("Billing");
+        jMenu13.setText("Bill");
+
+        jMenuItem26.setText("Spare");
+        jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem26ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem26);
+
+        jMenuItem27.setText("Motors");
+        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem27ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem27);
+
+        jMenu2.add(jMenu13);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu14.setText("Sale");
+        jMenu14.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu14.setMaximumSize(new java.awt.Dimension(65, 32767));
+
+        jMenuItem6.setText("Sale");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu14.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        jMenuItem28.setText("Service");
+        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem28ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem28);
+
+        jMenuItem25.setText("Certificate");
+        jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem25ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem25);
+
+        jMenuBar1.add(jMenu14);
 
         jMenu3.setText("StockAvailable");
         jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -372,13 +443,13 @@ public class avilable extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem13);
 
-        jMenuItem14.setText("SpareParts");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem29.setText("SpareParts");
+        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                jMenuItem29ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem14);
+        jMenu3.add(jMenuItem29);
 
         jMenuItem15.setText("Accessories");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
@@ -564,18 +635,28 @@ public class avilable extends javax.swing.JFrame {
              Class.forName("com.mysql.jdbc.Driver");
             Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bharatmotors","root","");
             Statement stmt=con.createStatement();
-            String sql="UPDATE MOTORS SET DATE='"+date.getText()+"', TYPE='"+type.getText()+"',PART_NO='"+partno.getText()+"',ITEM_NAME='"+name.getText()+"',MODEL='"+model.getText()+"',CHASE_NO='"+chaseno.getText()+"',COLOR='"+color.getText()+"',QUANTITY='"+qty.getText()+"',IN_PRICE='"+price.getText()+"' ,MRP='"+mrp.getText()+"' WHERE PART_NO='"+List1.getSelectedValue()+"'";
+            String sql="UPDATE MOTORS SET  TYPE='"+type.getText()+"',ITEM_NAME='"+name.getText()+"',CUBIC_CAPACITY='"+cubic.getText()+"',ENGINE_NO='"+eng.getText()+"',CHASE_NO='"+chase.getText()+"',COLOR='"+color.getText()+"',QUANTITY='"+qty.getText()+"',EXSHOWROOM='"+room.getText()+"' ,MRP='"+mrp.getText()+"',REMARK='"+remark.getText()+"' WHERE ITEM_NAME='"+List1.getSelectedValue()+"'";
             
             stmt.execute(sql);  
             
            JOptionPane.showMessageDialog(null,"Updated");
-           FillList();
+       
             
         }
         catch(Exception e)
         {
             JOptionPane.showMessageDialog(null,e.toString());
         }
+        type.setText("");
+        name.setText("");
+        cubic.setText("");
+        eng.setText("");
+        chase.setText("");
+        color.setText("");
+        qty.setText("");
+        room.setText("");
+        mrp.setText("");
+        remark.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -613,16 +694,19 @@ public class avilable extends javax.swing.JFrame {
             ResultSet rs=stmt.executeQuery(sql);  
             
             while(rs.next())
-            {
+            {  
+                date.setText(rs.getString(1));
                 type.setText(rs.getString(2));
-                partno.setText(rs.getString(3));
-                name.setText(rs.getString(4));
-                model.setText(rs.getString(5));
-                chaseno.setText(rs.getString(6));
+                cubic.setText(rs.getString(4));
+                name.setText(rs.getString(3));
+                
+                eng.setText(rs.getString(5));
+                chase.setText(rs.getString(6));
                 color.setText((rs.getString(7)));
                 qty.setText(rs.getString(8));
-                price.setText(rs.getString(9));
+               room.setText(rs.getString(9));
                 mrp.setText(rs.getString(10));
+                remark.setText(rs.getString(11));
             }
             
         }
@@ -647,27 +731,27 @@ public class avilable extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void chasenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chasenoActionPerformed
+    private void chaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chasenoActionPerformed
+    }//GEN-LAST:event_chaseActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         Bike b=new Bike();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItem22ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
         Scooty s=new Scooty();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
         Lubricants l=new Lubricants();
         l.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItem24ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         SpareParts p=new SpareParts();
@@ -681,18 +765,45 @@ public class avilable extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Bill b=new Bill();
+    private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
+        // TODO add your handling code here:
+        Billspare b=new Billspare();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItem26ActionPerformed
+
+    private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
+        // TODO add your handling code here:
+        billmotors b=new billmotors();
+        b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem27ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        Bill b=new Bill();
-        b.setVisible(true);
-        setVisible(false);
     }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        Sale s=new Sale();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+        // TODO add your handling code here:
+        Service s=new Service();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
+        // TODO add your handling code here:
+
+        salescert c=new salescert();
+        c.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem25ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
@@ -708,12 +819,12 @@ public class avilable extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
         stockspareparts s=new stockspareparts();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_jMenuItem29ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
@@ -846,6 +957,14 @@ public class avilable extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu7ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        motorexcel m=new motorexcel();
+        m.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -883,16 +1002,21 @@ public class avilable extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList List1;
-    private javax.swing.JTextField chaseno;
+    private javax.swing.JTextField chase;
     private javax.swing.JTextField color;
-    private javax.swing.JLabel date;
+    private javax.swing.JTextField cubic;
+    private javax.swing.JTextField date;
+    private javax.swing.JTextField eng;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -900,11 +1024,12 @@ public class avilable extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu14;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -913,19 +1038,23 @@ public class avilable extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
+    private javax.swing.JMenuItem jMenuItem24;
+    private javax.swing.JMenuItem jMenuItem25;
+    private javax.swing.JMenuItem jMenuItem26;
+    private javax.swing.JMenuItem jMenuItem27;
+    private javax.swing.JMenuItem jMenuItem28;
+    private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
@@ -933,12 +1062,13 @@ public class avilable extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField model;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField mrp;
     private javax.swing.JTextField name;
-    private javax.swing.JTextField partno;
-    private javax.swing.JTextField price;
     private javax.swing.JTextField qty;
+    private javax.swing.JTextArea remark;
+    private javax.swing.JTextField room;
     private javax.swing.JTextField search;
     private javax.swing.JTextField type;
     // End of variables declaration//GEN-END:variables

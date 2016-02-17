@@ -1,14 +1,7 @@
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import javax.swing.DefaultListModel;
+import java.sql.*;
 import javax.swing.JOptionPane;
-import javax.swing.text.Position;
-
+import net.proteanit.sql.DbUtils;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,43 +12,13 @@ import javax.swing.text.Position;
  *
  * @author Digital
  */
-public class motorsupdate extends javax.swing.JFrame {
+public class Searchreg extends javax.swing.JFrame {
 
-    /**
-     * Creates new form motorsupdate
-     */
-    public void CurrentDate()
-    {
-     Calendar cal=new GregorianCalendar();
-      int mnth=cal.get(Calendar.MONTH);
-      int year=cal.get(Calendar.YEAR);
-      int day=cal.get(Calendar.DAY_OF_MONTH);
-     date.setText(day+"/"+(mnth+1)+"/"+year);
-    }
-     public void FillList(){
-        try
-        {
-            String sql="select * from motors";
-             Class.forName("com.mysql.jdbc.Driver");
-            Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bharatmotors","root","");
-            Statement stmt=con.createStatement();
-            ResultSet rs=stmt.executeQuery(sql);  
-            DefaultListModel DLM=new  DefaultListModel();
-            while(rs.next())
-            {
-                DLM.addElement(rs.getString(4));
-            }
-            List.setModel(DLM);
-        }
-        catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null,"e.getString()");
-        }
-    }
-    public motorsupdate() {
+    public Searchreg() {
         initComponents();
-        CurrentDate();
-        FillList();
+        Connection con=null;
+        ResultSet rs=null;
+        PreparedStatemnt pst=null;
     }
 
     /**
@@ -69,32 +32,11 @@ public class motorsupdate extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        Color = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        date = new javax.swing.JTextField();
-        type = new javax.swing.JTextField();
-        partno = new javax.swing.JTextField();
-        itemname = new javax.swing.JTextField();
-        model = new javax.swing.JTextField();
-        chaseno = new javax.swing.JTextField();
-        color = new javax.swing.JTextField();
-        quantity = new javax.swing.JTextField();
-        price = new javax.swing.JTextField();
-        mrp = new javax.swing.JTextField();
+        reg = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
-        search = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        List = new javax.swing.JList();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
@@ -105,11 +47,17 @@ public class motorsupdate extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
+        jMenu14 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem24 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -128,122 +76,33 @@ public class motorsupdate extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 35)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel1.setText("BHARATH MOTORS\n");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(333, 34, 360, 41);
+        jLabel1.setText("BHARATHMOTORS");
 
-        jLabel2.setText("Date");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(350, 130, 60, 20);
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel2.setText("Register No:");
 
-        jLabel3.setText("Type");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(350, 180, 60, 20);
-
-        jLabel4.setText("Part_No");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(350, 234, 60, 20);
-
-        jLabel5.setText("Item_Name");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(350, 280, 70, 20);
-
-        jLabel6.setText("Model");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(350, 324, 60, 30);
-
-        jLabel7.setText("Chase_No");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(350, 380, 70, 20);
-
-        Color.setText("Color");
-        getContentPane().add(Color);
-        Color.setBounds(350, 430, 60, 20);
-
-        jLabel9.setText("Quantity");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(350, 480, 60, 20);
-
-        jLabel10.setText("In_Price");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(350, 530, 60, 20);
-
-        jLabel11.setText("MRP");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(350, 580, 60, 20);
-        getContentPane().add(date);
-        date.setBounds(440, 120, 330, 30);
-        getContentPane().add(type);
-        type.setBounds(440, 170, 330, 30);
-        getContentPane().add(partno);
-        partno.setBounds(440, 220, 330, 30);
-        getContentPane().add(itemname);
-        itemname.setBounds(440, 270, 330, 30);
-        getContentPane().add(model);
-        model.setBounds(440, 320, 330, 30);
-        getContentPane().add(chaseno);
-        chaseno.setBounds(440, 370, 330, 30);
-        getContentPane().add(color);
-        color.setBounds(440, 420, 330, 30);
-        getContentPane().add(quantity);
-        quantity.setBounds(440, 470, 330, 30);
-        getContentPane().add(price);
-        price.setBounds(440, 520, 330, 30);
-        getContentPane().add(mrp);
-        mrp.setBounds(440, 570, 330, 30);
-
-        jButton1.setText("Update");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(810, 170, 90, 40);
 
-        jButton2.setText("Delete");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
             }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(810, 310, 90, 40);
+        ));
+        jScrollPane2.setViewportView(table);
 
-        jButton3.setText("Back");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(810, 443, 90, 40);
-
-        jLabel12.setText("Search");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(10, 120, 70, 20);
-
-        search.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                searchKeyReleased(evt);
-            }
-        });
-        getContentPane().add(search);
-        search.setBounds(10, 140, 250, 30);
-
-        List.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                ListValueChanged(evt);
-            }
-        });
-        jScrollPane1.setViewportView(List);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 180, 250, 410);
+        jScrollPane1.setViewportView(jScrollPane2);
 
         jMenu1.setText("StockEntry");
         jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -308,15 +167,57 @@ public class motorsupdate extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem6.setText("Billing");
+        jMenu13.setText("Bill");
+
+        jMenuItem20.setText("Spare");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem20);
+
+        jMenuItem21.setText("Motors");
+        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem21ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem21);
+
+        jMenu2.add(jMenu13);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu14.setText("Sale");
+        jMenu14.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu14.setMaximumSize(new java.awt.Dimension(65, 32767));
+
+        jMenuItem6.setText("Sale");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu14.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        jMenuItem22.setText("Service");
+        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem22ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem22);
+
+        jMenuItem23.setText("Certificate");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem23ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem23);
+
+        jMenuBar1.add(jMenu14);
 
         jMenu3.setText("StockAvailable");
         jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -352,13 +253,13 @@ public class motorsupdate extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem13);
 
-        jMenuItem14.setText("SpareParts");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem24.setText("SpareParts");
+        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                jMenuItem24ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem14);
+        jMenu3.add(jMenuItem24);
 
         jMenuItem15.setText("Accessories");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
@@ -531,6 +432,42 @@ public class motorsupdate extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(reg, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(102, 102, 102)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(575, 575, 575)
+                .addComponent(jLabel1)
+                .addContainerGap(643, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reg, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(122, Short.MAX_VALUE))
+        );
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -564,18 +501,45 @@ public class motorsupdate extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Bill b=new Bill();
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        // TODO add your handling code here:
+        Billspare b=new Billspare();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
+
+    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+        // TODO add your handling code here:
+        billmotors b=new billmotors();
+        b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem21ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        Bill b=new Bill();
-        b.setVisible(true);
-        setVisible(false);
     }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        Sale s=new Sale();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
+        // TODO add your handling code here:
+        Service s=new Service();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem22ActionPerformed
+
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+        // TODO add your handling code here:
+
+        salescert c=new salescert();
+        c.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
@@ -591,12 +555,12 @@ public class motorsupdate extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
         // TODO add your handling code here:
         stockspareparts s=new stockspareparts();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_jMenuItem24ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
@@ -729,123 +693,33 @@ public class motorsupdate extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu7ActionPerformed
 
-    private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-       
-         int r= List.getNextMatch(search.getText(), 0, Position.Bias.Forward);
-       List.setSelectedIndex(r);
-    }//GEN-LAST:event_searchKeyReleased
-
-    private void ListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_ListValueChanged
-        // TODO add your handling code here:
-        
-        
-        
-        try
-        {
-            String sql="SELECT * FROM MOTORS WHERE ITEM_NAME='"+List.getSelectedValue()+"'";
-             Class.forName("com.mysql.jdbc.Driver");
-            Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bharatmotors","root","");
-            Statement stmt=con.createStatement();
-            ResultSet rs=stmt.executeQuery(sql);  
-            
-            while(rs.next())
-            {
-              
-                type.setText(rs.getString(2));
-              partno.setText(rs.getString(3));
-              itemname.setText(rs.getString(4));
-              model.setText(rs.getString(5));
-             chaseno.setText(rs.getString(6));
-            color.setText(rs.getString(7));
-            quantity.setText(rs.getString(8));
-            price.setText(rs.getString(9));
-          mrp.setText(rs.getString(10));
-                
-            }
-            
-        }
-        catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null,e.toString());
-        }
-        
-    }//GEN-LAST:event_ListValueChanged
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-     
+           String dat=reg.getText();
         
-        try
-        {
-            String part=itemname.getText();
-             Class.forName("com.mysql.jdbc.Driver");
+       
+        
+            String sql="select * from service where RegisterNo ='"+dat+"'";
+           
+          try {
+            Class.forName("com.mysql.jdbc.Driver");
             Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bharatmotors","root","");
             Statement stmt=con.createStatement();
-            String sql="UPDATE MOTORS SET DATE='"+date.getText()+"', TYPE='"+type.getText()+"', PART_NO='"+partno.getText()+"',ITEM_NAME='"+itemname.getText()+"',MODEL='"+model.getText()+"',CHASE_NO='"+chaseno.getText()+"',COLOR='"+color.getText()+"',QUANTITY='"+quantity.getText()+"',IN_PRICE='"+price.getText()+"',MRP='"+mrp.getText()+"' WHERE ITEM_NAME='"+List.getSelectedValue()+"'";
             
-            stmt.execute(sql);  
-            
-           JOptionPane.showMessageDialog(null,"Updated");
-
-            
-        }
+            ResultSet rs=stmt.executeQuery(sql);
+        
+            table.setModel(DbUtils.resultSetToTableModel(rs));
+       
           
+          
+        }
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null,e.toString());
+            JOptionPane.showMessageDialog(null,"e.getString()");
         }
-        type.setText("");
-         partno.setText("");
-        itemname.setText("");
-        model.setText("");
-        chaseno.setText("");
-        color.setText("");
-        quantity.setText("");
-        price.setText("");
-        mrp.setText("");
+        
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        
-        
-        try
-        {
-            
-             Class.forName("com.mysql.jdbc.Driver");
-            Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bharatmotors","root","");
-            Statement stmt=con.createStatement();
-            String sql="DELETE FROM MOTORS WHERE ITEM_NAME='"+List.getSelectedValue()+"'";
-            
-            stmt.execute(sql);  
-            
-           JOptionPane.showMessageDialog(null,"Deleted");
-           FillList();
-            
-        }
-        catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null,e.toString());
-        }
-         type.setText("");
-         partno.setText("");
-        itemname.setText("");
-        model.setText("");
-        chaseno.setText("");
-        color.setText("");
-        quantity.setText("");
-        price.setText("");
-        mrp.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Stock s=new Stock();
-        s.setVisible(true);
-        setVisible(false);
-        dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -864,49 +738,34 @@ public class motorsupdate extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(motorsupdate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchreg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(motorsupdate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchreg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(motorsupdate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchreg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(motorsupdate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchreg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new motorsupdate().setVisible(true);
+                new Searchreg().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Color;
-    private javax.swing.JList List;
-    private javax.swing.JTextField chaseno;
-    private javax.swing.JTextField color;
-    private javax.swing.JTextField date;
-    private javax.swing.JTextField itemname;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu14;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -920,13 +779,17 @@ public class motorsupdate extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
+    private javax.swing.JMenuItem jMenuItem24;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -935,12 +798,8 @@ public class motorsupdate extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField model;
-    private javax.swing.JTextField mrp;
-    private javax.swing.JTextField partno;
-    private javax.swing.JTextField price;
-    private javax.swing.JTextField quantity;
-    private javax.swing.JTextField search;
-    private javax.swing.JTextField type;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField reg;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }

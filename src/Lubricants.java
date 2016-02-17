@@ -63,22 +63,31 @@ public class Lubricants extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        remark = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
-        jMenuItem23 = new javax.swing.JMenuItem();
-        jMenuItem24 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
-        jMenuItem25 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuItem26 = new javax.swing.JMenuItem();
+        jMenuItem27 = new javax.swing.JMenuItem();
+        jMenu14 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem28 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem24 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -141,25 +150,25 @@ public class Lubricants extends javax.swing.JFrame {
         getContentPane().add(price);
         price.setBounds(410, 460, 460, 40);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Submit");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(210, 600, 110, 50);
+        jButton1.setBounds(920, 230, 120, 50);
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("Back");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton2.setText("BACK");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(730, 600, 110, 50);
+        jButton2.setBounds(920, 560, 120, 50);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel6.setText("MRP");
@@ -180,15 +189,15 @@ public class Lubricants extends javax.swing.JFrame {
         getContentPane().add(jLabel7);
         jLabel7.setBounds(340, 30, 280, 40);
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton3.setText("Update");
+        jButton3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton3.setText("UPDATE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(390, 600, 120, 50);
+        jButton3.setBounds(920, 340, 120, 50);
 
         jLabel8.setText("Date");
         getContentPane().add(jLabel8);
@@ -196,15 +205,27 @@ public class Lubricants extends javax.swing.JFrame {
         getContentPane().add(date);
         date.setBounds(410, 124, 460, 40);
 
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton4.setText("Export");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButton5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton5.setText("VIEW");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(580, 603, 100, 50);
+        getContentPane().add(jButton5);
+        jButton5.setBounds(920, 440, 120, 50);
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel9.setText("Remark");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(300, 594, 60, 30);
+
+        remark.setColumns(20);
+        remark.setRows(5);
+        jScrollPane1.setViewportView(remark);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(410, 580, 460, 96);
 
         jMenu1.setText("StockEntry");
         jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -212,33 +233,33 @@ public class Lubricants extends javax.swing.JFrame {
 
         jMenu8.setText("Motors");
 
-        jMenuItem23.setText("Bike");
-        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem20.setText("Bike");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem23ActionPerformed(evt);
+                jMenuItem20ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem23);
+        jMenu8.add(jMenuItem20);
 
-        jMenuItem24.setText("Scooty");
-        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem21.setText("Scooty");
+        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem24ActionPerformed(evt);
+                jMenuItem21ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem24);
+        jMenu8.add(jMenuItem21);
 
         jMenu1.add(jMenu8);
 
         jMenu9.setText("Spare");
 
-        jMenuItem25.setText("Lubricants");
-        jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem22.setText("Lubricants");
+        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem25ActionPerformed(evt);
+                jMenuItem22ActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem25);
+        jMenu9.add(jMenuItem22);
 
         jMenuItem4.setText("SpareParts");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -269,15 +290,57 @@ public class Lubricants extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem6.setText("Billing");
+        jMenu13.setText("Bill");
+
+        jMenuItem26.setText("Spare");
+        jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem26ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem26);
+
+        jMenuItem27.setText("Motors");
+        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem27ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem27);
+
+        jMenu2.add(jMenu13);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu14.setText("Sale");
+        jMenu14.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu14.setMaximumSize(new java.awt.Dimension(65, 32767));
+
+        jMenuItem6.setText("Sale");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu14.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        jMenuItem28.setText("Service");
+        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem28ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem28);
+
+        jMenuItem23.setText("Certificate");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem23ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem23);
+
+        jMenuBar1.add(jMenu14);
 
         jMenu3.setText("StockAvailable");
         jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -313,13 +376,13 @@ public class Lubricants extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem13);
 
-        jMenuItem14.setText("SpareParts");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem24.setText("SpareParts");
+        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                jMenuItem24ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem14);
+        jMenu3.add(jMenuItem24);
 
         jMenuItem15.setText("Accessories");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
@@ -504,13 +567,15 @@ public class Lubricants extends javax.swing.JFrame {
         String Price=price.getText();
          String mrp1=mrp.getText();
          String date1=date.getText();
+         String remark1=remark.getText();
          partno.setText("");
          itemname.setText("");
          grade.setText("");
          quantity.setText("");
          price.setText("");
          mrp.setText("");
-        String sql="insert into lubricants values('"+date1+"','"+part+"','"+name+"','"+gra+"','"+qty+"','"+Price+"','"+mrp1+"')";
+         remark.setText("");
+        String sql="insert into lubricants values('"+date1+"','"+part+"','"+name+"','"+gra+"','"+qty+"','"+Price+"','"+mrp1+"','"+remark1+"')";
         
          
         try {
@@ -550,23 +615,30 @@ public class Lubricants extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        stockLubricants s=new stockLubricants();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
         Bike b=new Bike();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem23ActionPerformed
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
 
-    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
+    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
         Scooty s=new Scooty();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem24ActionPerformed
+    }//GEN-LAST:event_jMenuItem21ActionPerformed
 
-    private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
+    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         Lubricants l=new Lubricants();
         l.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem25ActionPerformed
+    }//GEN-LAST:event_jMenuItem22ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         SpareParts p=new SpareParts();
@@ -580,18 +652,45 @@ public class Lubricants extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Bill b=new Bill();
+    private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
+        // TODO add your handling code here:
+        Billspare b=new Billspare();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItem26ActionPerformed
+
+    private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
+        // TODO add your handling code here:
+        billmotors b=new billmotors();
+        b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem27ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        Bill b=new Bill();
-        b.setVisible(true);
-        setVisible(false);
     }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        Sale s=new Sale();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+        // TODO add your handling code here:
+        Service s=new Service();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+        // TODO add your handling code here:
+
+        salescert c=new salescert();
+        c.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
@@ -607,12 +706,12 @@ public class Lubricants extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
         // TODO add your handling code here:
         stockspareparts s=new stockspareparts();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_jMenuItem24ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
@@ -745,14 +844,6 @@ public class Lubricants extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu7ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    stockexcel s=new stockexcel();
-        s.setVisible(true);
-        setVisible(false);
-        dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -795,7 +886,7 @@ public class Lubricants extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -804,10 +895,13 @@ public class Lubricants extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu14;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -821,16 +915,20 @@ public class Lubricants extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
     private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem24;
-    private javax.swing.JMenuItem jMenuItem25;
+    private javax.swing.JMenuItem jMenuItem26;
+    private javax.swing.JMenuItem jMenuItem27;
+    private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -838,9 +936,11 @@ public class Lubricants extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField mrp;
     private javax.swing.JTextField partno;
     private javax.swing.JTextField price;
     private javax.swing.JTextField quantity;
+    private javax.swing.JTextArea remark;
     // End of variables declaration//GEN-END:variables
 }

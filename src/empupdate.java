@@ -68,35 +68,41 @@ public class empupdate extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         addr = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        List1 = new javax.swing.JList();
         dob = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         search = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         day = new javax.swing.JTextField();
         alt = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu8 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu9 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        List1 = new javax.swing.JList();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu10 = new javax.swing.JMenu();
+        jMenuItem24 = new javax.swing.JMenuItem();
+        jMenuItem25 = new javax.swing.JMenuItem();
+        jMenu11 = new javax.swing.JMenu();
+        jMenuItem26 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuItem27 = new javax.swing.JMenuItem();
+        jMenuItem28 = new javax.swing.JMenuItem();
+        jMenu14 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
+        jMenuItem29 = new javax.swing.JMenuItem();
+        jMenuItem30 = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem31 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenu12 = new javax.swing.JMenu();
         jMenuItem11 = new javax.swing.JMenuItem();
@@ -105,12 +111,12 @@ public class empupdate extends javax.swing.JFrame {
         jMenuItem17 = new javax.swing.JMenuItem();
         jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem19 = new javax.swing.JMenuItem();
-        jMenu10 = new javax.swing.JMenu();
-        jMenu11 = new javax.swing.JMenu();
+        jMenu15 = new javax.swing.JMenu();
+        jMenu16 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
+        jMenu17 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bharatmotors/employee");
@@ -120,102 +126,90 @@ public class empupdate extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("BHARATH MOTORS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(390, 30, 310, 40);
+        jLabel1.setBounds(390, 10, 310, 40);
 
         jLabel2.setText("Emp_ID");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(340, 130, 80, 29);
+        jLabel2.setBounds(400, 100, 80, 29);
         getContentPane().add(id);
-        id.setBounds(530, 120, 270, 40);
+        id.setBounds(530, 100, 420, 30);
 
         jLabel3.setText("Emp_Name");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(340, 180, 80, 32);
+        jLabel3.setBounds(400, 150, 80, 32);
         getContentPane().add(name);
-        name.setBounds(530, 180, 270, 40);
+        name.setBounds(530, 150, 420, 30);
 
         jLabel4.setText("Last_Name");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(340, 250, 66, 22);
+        jLabel4.setBounds(400, 200, 66, 22);
         getContentPane().add(lname);
-        lname.setBounds(530, 240, 270, 40);
+        lname.setBounds(530, 200, 420, 30);
 
         jLabel5.setText("Address");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(340, 380, 57, 20);
+        jLabel5.setBounds(400, 310, 57, 20);
         getContentPane().add(pno);
-        pno.setBounds(530, 450, 270, 40);
+        pno.setBounds(530, 380, 420, 30);
 
         jLabel6.setText("Phn.No");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(340, 470, 80, 20);
+        jLabel6.setBounds(400, 380, 80, 20);
         getContentPane().add(desi);
-        desi.setBounds(530, 570, 270, 40);
+        desi.setBounds(530, 480, 420, 30);
 
         jLabel7.setText("Designation");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(340, 590, 80, 20);
+        jLabel7.setBounds(400, 480, 80, 20);
         getContentPane().add(basic);
-        basic.setBounds(530, 630, 270, 40);
+        basic.setBounds(530, 530, 420, 30);
 
         jLabel8.setText("Basic_Salary");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(340, 650, 110, 20);
+        jLabel8.setBounds(400, 530, 110, 20);
 
-        jButton1.setText("Update");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton1.setText("UPDATE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(320, 780, 90, 50);
+        jButton1.setBounds(1030, 190, 120, 50);
 
-        jButton2.setText("Back");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton2.setText("BACK");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(790, 780, 100, 50);
+        jButton2.setBounds(1030, 460, 120, 50);
 
         addr.setColumns(20);
         addr.setRows(5);
         jScrollPane1.setViewportView(addr);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(530, 360, 270, 70);
-
-        List1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { " " };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        List1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                List1ValueChanged(evt);
-            }
-        });
-        jScrollPane2.setViewportView(List1);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(0, 210, 240, 330);
+        jScrollPane1.setBounds(530, 300, 420, 60);
         getContentPane().add(dob);
-        dob.setBounds(530, 300, 270, 40);
+        dob.setBounds(530, 250, 420, 30);
 
         jLabel9.setText("DOB");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(340, 310, 70, 20);
+        jLabel9.setBounds(400, 250, 70, 20);
 
-        jButton3.setText("Delete");
+        jButton3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton3.setText("DELETE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(560, 780, 90, 50);
+        jButton3.setBounds(1030, 320, 120, 50);
 
         search.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -234,56 +228,68 @@ public class empupdate extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(143, 173, 90, 30);
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel10.setText("e.g.,yyyy-mm-dd");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(820, 300, 130, 30);
-
         jLabel11.setText("Wages/day");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(340, 700, 70, 20);
+        jLabel11.setBounds(400, 580, 70, 20);
         getContentPane().add(day);
-        day.setBounds(530, 690, 270, 40);
+        day.setBounds(530, 580, 420, 30);
         getContentPane().add(alt);
-        alt.setBounds(530, 510, 270, 40);
+        alt.setBounds(530, 430, 420, 30);
 
         jLabel12.setText("Alt.No");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(340, 530, 70, 30);
+        jLabel12.setBounds(400, 430, 70, 30);
 
-        jMenu1.setText("StockEntry");
-        jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu1.setMaximumSize(new java.awt.Dimension(75, 32767));
-
-        jMenu8.setText("Motors");
-
-        jMenuItem1.setText("Bike");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+        List1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { " " };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        List1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                List1ValueChanged(evt);
             }
         });
-        jMenu8.add(jMenuItem1);
+        jScrollPane2.setViewportView(List1);
 
-        jMenuItem2.setText("Scooty");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jScrollPane3.setViewportView(jScrollPane2);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(10, 220, 240, 100);
+
+        jMenu3.setText("StockEntry");
+        jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu3.setMaximumSize(new java.awt.Dimension(75, 32767));
+
+        jMenu10.setText("Motors");
+
+        jMenuItem24.setText("Bike");
+        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem24ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem2);
+        jMenu10.add(jMenuItem24);
 
-        jMenu1.add(jMenu8);
-
-        jMenu9.setText("Spare");
-
-        jMenuItem3.setText("Lubricants");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem25.setText("Scooty");
+        jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItem25ActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem3);
+        jMenu10.add(jMenuItem25);
+
+        jMenu3.add(jMenu10);
+
+        jMenu11.setText("Spare");
+
+        jMenuItem26.setText("Lubricants");
+        jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem26ActionPerformed(evt);
+            }
+        });
+        jMenu11.add(jMenuItem26);
 
         jMenuItem4.setText("SpareParts");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -291,7 +297,7 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem4);
+        jMenu11.add(jMenuItem4);
 
         jMenuItem5.setText("Accessories");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -299,46 +305,88 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem5ActionPerformed(evt);
             }
         });
-        jMenu9.add(jMenuItem5);
+        jMenu11.add(jMenuItem5);
 
-        jMenu1.add(jMenu9);
+        jMenu3.add(jMenu11);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar3.add(jMenu3);
 
-        jMenu2.setText("Purchase");
-        jMenu2.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu2.setMaximumSize(new java.awt.Dimension(75, 32767));
-        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+        jMenu4.setText("Purchase");
+        jMenu4.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu4.setMaximumSize(new java.awt.Dimension(75, 32767));
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu2ActionPerformed(evt);
+                jMenu4ActionPerformed(evt);
             }
         });
 
-        jMenuItem6.setText("Billing");
+        jMenu13.setText("Bill");
+
+        jMenuItem27.setText("Spare");
+        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem27ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem27);
+
+        jMenuItem28.setText("Motors");
+        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem28ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem28);
+
+        jMenu4.add(jMenu13);
+
+        jMenuBar3.add(jMenu4);
+
+        jMenu14.setText("Sale");
+        jMenu14.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu14.setMaximumSize(new java.awt.Dimension(65, 32767));
+
+        jMenuItem6.setText("Sale");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu14.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        jMenuItem29.setText("Service");
+        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem29ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem29);
 
-        jMenu3.setText("StockAvailable");
-        jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu3.setMaximumSize(new java.awt.Dimension(115, 32767));
-        jMenu3.addMenuListener(new javax.swing.event.MenuListener() {
+        jMenuItem30.setText("Certificate");
+        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem30ActionPerformed(evt);
+            }
+        });
+        jMenu14.add(jMenuItem30);
+
+        jMenuBar3.add(jMenu14);
+
+        jMenu5.setText("StockAvailable");
+        jMenu5.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu5.setMaximumSize(new java.awt.Dimension(115, 32767));
+        jMenu5.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jMenu3MenuSelected(evt);
+                jMenu5MenuSelected(evt);
             }
         });
-        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+        jMenu5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu3ActionPerformed(evt);
+                jMenu5ActionPerformed(evt);
             }
         });
 
@@ -348,7 +396,7 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem9ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem9);
+        jMenu5.add(jMenuItem9);
 
         jMenuItem13.setText("Lubricants");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
@@ -356,15 +404,15 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem13ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem13);
+        jMenu5.add(jMenuItem13);
 
-        jMenuItem14.setText("SpareParts");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem31.setText("SpareParts");
+        jMenuItem31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                jMenuItem31ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem14);
+        jMenu5.add(jMenuItem31);
 
         jMenuItem15.setText("Accessories");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
@@ -372,25 +420,25 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem15ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem15);
+        jMenu5.add(jMenuItem15);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar3.add(jMenu5);
 
-        jMenu4.setText("Report");
-        jMenu4.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu4.setMaximumSize(new java.awt.Dimension(60, 32767));
-        jMenu4.addMenuListener(new javax.swing.event.MenuListener() {
+        jMenu6.setText("Report");
+        jMenu6.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu6.setMaximumSize(new java.awt.Dimension(60, 32767));
+        jMenu6.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jMenu4MenuSelected(evt);
+                jMenu6MenuSelected(evt);
             }
         });
-        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+        jMenu6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu4ActionPerformed(evt);
+                jMenu6ActionPerformed(evt);
             }
         });
 
@@ -400,7 +448,7 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem10ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem10);
+        jMenu6.add(jMenuItem10);
 
         jMenu12.setText("Bill");
 
@@ -420,7 +468,7 @@ public class empupdate extends javax.swing.JFrame {
         });
         jMenu12.add(jMenuItem12);
 
-        jMenu4.add(jMenu12);
+        jMenu6.add(jMenu12);
 
         jMenuItem16.setText("Lubricants");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
@@ -428,7 +476,7 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem16ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem16);
+        jMenu6.add(jMenuItem16);
 
         jMenuItem17.setText("SpareParts");
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
@@ -436,7 +484,7 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem17ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem17);
+        jMenu6.add(jMenuItem17);
 
         jMenuItem18.setText("Accessories");
         jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
@@ -444,7 +492,7 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem18ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem18);
+        jMenu6.add(jMenuItem18);
 
         jMenuItem19.setText("Motors");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
@@ -452,30 +500,30 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem19ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem19);
+        jMenu6.add(jMenuItem19);
 
-        jMenuBar1.add(jMenu4);
+        jMenuBar3.add(jMenu6);
 
-        jMenu10.setText("Payroll");
-        jMenu10.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu10.setMaximumSize(new java.awt.Dimension(60, 32767));
-        jMenu10.addMenuListener(new javax.swing.event.MenuListener() {
+        jMenu15.setText("Payroll");
+        jMenu15.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu15.setMaximumSize(new java.awt.Dimension(60, 32767));
+        jMenu15.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jMenu10MenuSelected(evt);
+                jMenu15MenuSelected(evt);
             }
         });
-        jMenuBar1.add(jMenu10);
+        jMenuBar3.add(jMenu15);
 
-        jMenu11.setLabel("Employee");
-        jMenu11.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu11.setMaximumSize(new java.awt.Dimension(70, 32767));
-        jMenu11.addActionListener(new java.awt.event.ActionListener() {
+        jMenu16.setLabel("Employee");
+        jMenu16.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu16.setMaximumSize(new java.awt.Dimension(70, 32767));
+        jMenu16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu11ActionPerformed(evt);
+                jMenu16ActionPerformed(evt);
             }
         });
 
@@ -485,7 +533,7 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem7ActionPerformed(evt);
             }
         });
-        jMenu11.add(jMenuItem7);
+        jMenu16.add(jMenuItem7);
 
         jMenuItem8.setText("Update/Delete");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
@@ -493,32 +541,13 @@ public class empupdate extends javax.swing.JFrame {
                 jMenuItem8ActionPerformed(evt);
             }
         });
-        jMenu11.add(jMenuItem8);
+        jMenu16.add(jMenuItem8);
 
-        jMenuBar1.add(jMenu11);
+        jMenuBar3.add(jMenu16);
 
-        jMenu5.setText("AboutUs");
-        jMenu5.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu5.setMaximumSize(new java.awt.Dimension(75, 32767));
-        jMenu5.addMenuListener(new javax.swing.event.MenuListener() {
-            public void menuCanceled(javax.swing.event.MenuEvent evt) {
-            }
-            public void menuDeselected(javax.swing.event.MenuEvent evt) {
-            }
-            public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jMenu5MenuSelected(evt);
-            }
-        });
-        jMenu5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu5ActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(jMenu5);
-
-        jMenu7.setText("Exit");
+        jMenu7.setText("AboutUs");
         jMenu7.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu7.setMaximumSize(new java.awt.Dimension(35, 32767));
+        jMenu7.setMaximumSize(new java.awt.Dimension(75, 32767));
         jMenu7.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
@@ -533,9 +562,28 @@ public class empupdate extends javax.swing.JFrame {
                 jMenu7ActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu7);
+        jMenuBar3.add(jMenu7);
 
-        setJMenuBar(jMenuBar1);
+        jMenu17.setText("Exit");
+        jMenu17.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu17.setMaximumSize(new java.awt.Dimension(35, 32767));
+        jMenu17.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuCanceled(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuSelected(javax.swing.event.MenuEvent evt) {
+                jMenu17MenuSelected(evt);
+            }
+        });
+        jMenu17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu17ActionPerformed(evt);
+            }
+        });
+        jMenuBar3.add(jMenu17);
+
+        setJMenuBar(jMenuBar3);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -558,7 +606,7 @@ public class empupdate extends javax.swing.JFrame {
              Class.forName("com.mysql.jdbc.Driver");
             Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bharatmotors","root","");
             Statement stmt=con.createStatement();
-            String sql="UPDATE EMPLOYEE SET EMP_ID='"+id.getText()+"',EMP_NAME='"+name.getText()+"',LAST_NAME='"+lname.getText()+"',DOB='"+dob.getText()+"',ADDRESS='"+addr.getText()+"',PHN_NO='"+pno.getText()+"',ALT_NO='"+alt.getText()+"',DESIGNATION='"+desi.getText()+"',BASIC_SALARY='"+basic.getText()+"',WAGES_DAY='"+day.getText()+"' WHERE EMP_ID='"+List1.getSelectedValue()+"'";
+            String sql="UPDATE EMPLOYEE SET EMP_ID='"+id.getText()+"',EMP_NAME='"+name.getText()+"',LAST_NAME='"+lname.getText()+"',DOB='"+dob.getText()+"',ADDRESS='"+addr.getText()+"',PHN_NO='"+pno.getText()+"',ALT_NO='"+alt.getText()+"',DESIGNATION='"+desi.getText()+"',BASIC_SALARY='"+basic.getText()+"',WAGES_DAY='"+day.getText()+"' WHERE EMP_NAME='"+List1.getSelectedValue()+"'";
             
             stmt.execute(sql);  
             
@@ -671,23 +719,23 @@ public class empupdate extends javax.swing.JFrame {
        List1.setSelectedIndex(r);
     }//GEN-LAST:event_searchKeyReleased
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
         Bike b=new Bike();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItem24ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
         Scooty s=new Scooty();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMenuItem25ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
         Lubricants l=new Lubricants();
         l.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItem26ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         SpareParts p=new SpareParts();
@@ -701,18 +749,45 @@ public class empupdate extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Bill b=new Bill();
+    private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
+        // TODO add your handling code here:
+        Billspare b=new Billspare();
         b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem27ActionPerformed
+
+    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+        // TODO add your handling code here:
+        billmotors b=new billmotors();
+        b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        Sale s=new Sale();
+        s.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+    private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
-        Bill b=new Bill();
-        b.setVisible(true);
+        Service s=new Service();
+        s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenu2ActionPerformed
+    }//GEN-LAST:event_jMenuItem29ActionPerformed
+
+    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
+        // TODO add your handling code here:
+
+        salescert c=new salescert();
+        c.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem30ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
@@ -728,12 +803,12 @@ public class empupdate extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void jMenuItem31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem31ActionPerformed
         // TODO add your handling code here:
         stockspareparts s=new stockspareparts();
         s.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_jMenuItem31ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
@@ -742,13 +817,13 @@ public class empupdate extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
-    private void jMenu3MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu3MenuSelected
+    private void jMenu5MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu5MenuSelected
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu3MenuSelected
+    }//GEN-LAST:event_jMenu5MenuSelected
 
-    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu3ActionPerformed
+    }//GEN-LAST:event_jMenu5ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
@@ -802,20 +877,20 @@ public class empupdate extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
-    private void jMenu4MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu4MenuSelected
+    private void jMenu6MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu6MenuSelected
 
-    }//GEN-LAST:event_jMenu4MenuSelected
+    }//GEN-LAST:event_jMenu6MenuSelected
 
-    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+    private void jMenu6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu4ActionPerformed
+    }//GEN-LAST:event_jMenu6ActionPerformed
 
-    private void jMenu10MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu10MenuSelected
+    private void jMenu15MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu15MenuSelected
         // TODO add your handling code here:
         payroll p=new payroll();
         p.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenu10MenuSelected
+    }//GEN-LAST:event_jMenu15MenuSelected
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
@@ -833,26 +908,26 @@ public class empupdate extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
-    private void jMenu11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu11ActionPerformed
+    private void jMenu16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu16ActionPerformed
         // TODO add your handling code here:
         empupdate u=new empupdate();
         u.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenu11ActionPerformed
+    }//GEN-LAST:event_jMenu16ActionPerformed
 
-    private void jMenu5MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu5MenuSelected
+    private void jMenu7MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu7MenuSelected
         // TODO add your handling code here:
         company1 c=new company1();
         c.setVisible(true);
 
         setVisible(false);
-    }//GEN-LAST:event_jMenu5MenuSelected
+    }//GEN-LAST:event_jMenu7MenuSelected
 
-    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu5ActionPerformed
+    }//GEN-LAST:event_jMenu7ActionPerformed
 
-    private void jMenu7MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu7MenuSelected
+    private void jMenu17MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu17MenuSelected
         String message = "  Are you sure you want to exit the application!!!  ";
         int answer = JOptionPane.showConfirmDialog(null, message, "Confirmation!!!", JOptionPane.YES_NO_OPTION);
         if (answer == JOptionPane.YES_OPTION) {
@@ -860,11 +935,11 @@ public class empupdate extends javax.swing.JFrame {
         } else if (answer == JOptionPane.NO_OPTION) {
             // User clicked NO.
         }
-    }//GEN-LAST:event_jMenu7MenuSelected
+    }//GEN-LAST:event_jMenu17MenuSelected
 
-    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+    private void jMenu17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu17ActionPerformed
 
-    }//GEN-LAST:event_jMenu7ActionPerformed
+    }//GEN-LAST:event_jMenu17ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -915,7 +990,6 @@ public class empupdate extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
@@ -926,31 +1000,37 @@ public class empupdate extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu13;
+    private javax.swing.JMenu jMenu14;
+    private javax.swing.JMenu jMenu15;
+    private javax.swing.JMenu jMenu16;
+    private javax.swing.JMenu jMenu17;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem24;
+    private javax.swing.JMenuItem jMenuItem25;
+    private javax.swing.JMenuItem jMenuItem26;
+    private javax.swing.JMenuItem jMenuItem27;
+    private javax.swing.JMenuItem jMenuItem28;
+    private javax.swing.JMenuItem jMenuItem29;
+    private javax.swing.JMenuItem jMenuItem30;
+    private javax.swing.JMenuItem jMenuItem31;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
@@ -959,6 +1039,7 @@ public class empupdate extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField lname;
     private javax.swing.JTextField name;
     private javax.swing.JTextField pno;

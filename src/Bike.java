@@ -40,6 +40,7 @@ public class Bike extends javax.swing.JFrame {
         jMenuBar4 = new javax.swing.JMenuBar();
         jMenu16 = new javax.swing.JMenu();
         jMenu17 = new javax.swing.JMenu();
+        jMenuItem20 = new javax.swing.JMenuItem();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -49,18 +50,24 @@ public class Bike extends javax.swing.JFrame {
         jMenu8 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu13 = new javax.swing.JMenu();
+        jMenu21 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu13 = new javax.swing.JMenu();
+        jMenuItem21 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
+        jMenu22 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
+        jMenuItem24 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
-        jMenu18 = new javax.swing.JMenu();
+        jMenu23 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenu12 = new javax.swing.JMenu();
         jMenuItem11 = new javax.swing.JMenuItem();
@@ -73,8 +80,8 @@ public class Bike extends javax.swing.JFrame {
         jMenu11 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu19 = new javax.swing.JMenu();
-        jMenu20 = new javax.swing.JMenu();
+        jMenu24 = new javax.swing.JMenu();
+        jMenu25 = new javax.swing.JMenu();
 
         jMenu4.setText("File");
         jMenuBar2.add(jMenu4);
@@ -100,40 +107,42 @@ public class Bike extends javax.swing.JFrame {
         jMenu17.setText("Edit");
         jMenuBar4.add(jMenu17);
 
+        jMenuItem20.setText("jMenuItem20");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bharathmotors");
         setName("bike"); // NOI18N
         getContentPane().setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Insert");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton1.setText("INSERT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(70, 400, 120, 70);
+        jButton1.setBounds(70, 400, 130, 60);
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("Delete");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton2.setText("DELETE");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(780, 400, 120, 70);
+        jButton2.setBounds(780, 400, 130, 60);
 
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton4.setText("Update");
+        jButton4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jButton4.setText("UPDATE");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(420, 400, 120, 70);
+        jButton4.setBounds(420, 400, 130, 60);
 
         jLabel1.setFont(new java.awt.Font("Imprint MT Shadow", 1, 33)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
@@ -165,7 +174,7 @@ public class Bike extends javax.swing.JFrame {
 
         jMenu1.add(jMenu8);
 
-        jMenu13.setText("Spare");
+        jMenu21.setText("Spare");
 
         jMenuItem3.setText("Lubricants");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +182,7 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem3ActionPerformed(evt);
             }
         });
-        jMenu13.add(jMenuItem3);
+        jMenu21.add(jMenuItem3);
 
         jMenuItem4.setText("SpareParts");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +190,7 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
-        jMenu13.add(jMenuItem4);
+        jMenu21.add(jMenuItem4);
 
         jMenuItem5.setText("Accessories");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -189,9 +198,9 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem5ActionPerformed(evt);
             }
         });
-        jMenu13.add(jMenuItem5);
+        jMenu21.add(jMenuItem5);
 
-        jMenu1.add(jMenu13);
+        jMenu1.add(jMenu21);
 
         jMenuBar1.add(jMenu1);
 
@@ -204,15 +213,57 @@ public class Bike extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem6.setText("Billing");
+        jMenu13.setText("Bill");
+
+        jMenuItem21.setText("Spare");
+        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem21ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem21);
+
+        jMenuItem22.setText("Motors");
+        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem22ActionPerformed(evt);
+            }
+        });
+        jMenu13.add(jMenuItem22);
+
+        jMenu2.add(jMenu13);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu22.setText("Sale");
+        jMenu22.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu22.setMaximumSize(new java.awt.Dimension(65, 32767));
+
+        jMenuItem6.setText("Sale");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu22.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        jMenuItem23.setText("Service");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem23ActionPerformed(evt);
+            }
+        });
+        jMenu22.add(jMenuItem23);
+
+        jMenuItem24.setText("Certificate");
+        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem24ActionPerformed(evt);
+            }
+        });
+        jMenu22.add(jMenuItem24);
+
+        jMenuBar1.add(jMenu22);
 
         jMenu3.setText("StockAvailable");
         jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -266,21 +317,21 @@ public class Bike extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu18.setText("Report");
-        jMenu18.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu18.setMaximumSize(new java.awt.Dimension(60, 32767));
-        jMenu18.addMenuListener(new javax.swing.event.MenuListener() {
+        jMenu23.setText("Report");
+        jMenu23.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu23.setMaximumSize(new java.awt.Dimension(60, 32767));
+        jMenu23.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jMenu18MenuSelected(evt);
+                jMenu23MenuSelected(evt);
             }
         });
-        jMenu18.addActionListener(new java.awt.event.ActionListener() {
+        jMenu23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu18ActionPerformed(evt);
+                jMenu23ActionPerformed(evt);
             }
         });
 
@@ -290,7 +341,7 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem10ActionPerformed(evt);
             }
         });
-        jMenu18.add(jMenuItem10);
+        jMenu23.add(jMenuItem10);
 
         jMenu12.setText("Bill");
 
@@ -310,7 +361,7 @@ public class Bike extends javax.swing.JFrame {
         });
         jMenu12.add(jMenuItem12);
 
-        jMenu18.add(jMenu12);
+        jMenu23.add(jMenu12);
 
         jMenuItem16.setText("Lubricants");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
@@ -318,7 +369,7 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem16ActionPerformed(evt);
             }
         });
-        jMenu18.add(jMenuItem16);
+        jMenu23.add(jMenuItem16);
 
         jMenuItem17.setText("SpareParts");
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
@@ -326,7 +377,7 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem17ActionPerformed(evt);
             }
         });
-        jMenu18.add(jMenuItem17);
+        jMenu23.add(jMenuItem17);
 
         jMenuItem18.setText("Accessories");
         jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
@@ -334,7 +385,7 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem18ActionPerformed(evt);
             }
         });
-        jMenu18.add(jMenuItem18);
+        jMenu23.add(jMenuItem18);
 
         jMenuItem19.setText("Motors");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
@@ -342,9 +393,9 @@ public class Bike extends javax.swing.JFrame {
                 jMenuItem19ActionPerformed(evt);
             }
         });
-        jMenu18.add(jMenuItem19);
+        jMenu23.add(jMenuItem19);
 
-        jMenuBar1.add(jMenu18);
+        jMenuBar1.add(jMenu23);
 
         jMenu10.setText("Payroll");
         jMenu10.setMargin(new java.awt.Insets(0, 5, 0, 0));
@@ -387,43 +438,43 @@ public class Bike extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu11);
 
-        jMenu19.setText("AboutUs");
-        jMenu19.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu19.setMaximumSize(new java.awt.Dimension(75, 32767));
-        jMenu19.addMenuListener(new javax.swing.event.MenuListener() {
+        jMenu24.setText("AboutUs");
+        jMenu24.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu24.setMaximumSize(new java.awt.Dimension(75, 32767));
+        jMenu24.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jMenu19MenuSelected(evt);
+                jMenu24MenuSelected(evt);
             }
         });
-        jMenu19.addActionListener(new java.awt.event.ActionListener() {
+        jMenu24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu19ActionPerformed(evt);
+                jMenu24ActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu19);
+        jMenuBar1.add(jMenu24);
 
-        jMenu20.setText("Exit");
-        jMenu20.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jMenu20.setMaximumSize(new java.awt.Dimension(35, 32767));
-        jMenu20.addMenuListener(new javax.swing.event.MenuListener() {
+        jMenu25.setText("Exit");
+        jMenu25.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jMenu25.setMaximumSize(new java.awt.Dimension(35, 32767));
+        jMenu25.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jMenu20MenuSelected(evt);
+                jMenu25MenuSelected(evt);
             }
         });
-        jMenu20.addActionListener(new java.awt.event.ActionListener() {
+        jMenu25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu20ActionPerformed(evt);
+                jMenu25ActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu20);
+        jMenuBar1.add(jMenu25);
 
         setJMenuBar(jMenuBar1);
 
@@ -485,18 +536,46 @@ public class Bike extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Bill b=new Bill();
+    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+        // TODO add your handling code here:
+        Billspare b=new Billspare();
         b.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItem21ActionPerformed
+
+    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
+        // TODO add your handling code here:
+        billmotors b=new billmotors();
+        b.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem22ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-        Bill b=new Bill();
-        b.setVisible(true);
-        setVisible(false);
+
     }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        Sale s=new Sale();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+        // TODO add your handling code here:
+        Service s=new Service();
+        s.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
+
+    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
+        // TODO add your handling code here:
+
+        salescert c=new salescert();
+        c.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jMenuItem24ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
@@ -586,13 +665,13 @@ public class Bike extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
-    private void jMenu18MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu18MenuSelected
+    private void jMenu23MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu23MenuSelected
 
-    }//GEN-LAST:event_jMenu18MenuSelected
+    }//GEN-LAST:event_jMenu23MenuSelected
 
-    private void jMenu18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu18ActionPerformed
+    private void jMenu23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu23ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu18ActionPerformed
+    }//GEN-LAST:event_jMenu23ActionPerformed
 
     private void jMenu10MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu10MenuSelected
         // TODO add your handling code here:
@@ -624,19 +703,19 @@ public class Bike extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jMenu11ActionPerformed
 
-    private void jMenu19MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu19MenuSelected
+    private void jMenu24MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu24MenuSelected
         // TODO add your handling code here:
         company1 c=new company1();
         c.setVisible(true);
 
         setVisible(false);
-    }//GEN-LAST:event_jMenu19MenuSelected
+    }//GEN-LAST:event_jMenu24MenuSelected
 
-    private void jMenu19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu19ActionPerformed
+    private void jMenu24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu24ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu19ActionPerformed
+    }//GEN-LAST:event_jMenu24ActionPerformed
 
-    private void jMenu20MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu20MenuSelected
+    private void jMenu25MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu25MenuSelected
         String message = "  Are you sure you want to exit the application!!!  ";
         int answer = JOptionPane.showConfirmDialog(null, message, "Confirmation!!!", JOptionPane.YES_NO_OPTION);
         if (answer == JOptionPane.YES_OPTION) {
@@ -644,11 +723,11 @@ public class Bike extends javax.swing.JFrame {
         } else if (answer == JOptionPane.NO_OPTION) {
             // User clicked NO.
         }
-    }//GEN-LAST:event_jMenu20MenuSelected
+    }//GEN-LAST:event_jMenu25MenuSelected
 
-    private void jMenu20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu20ActionPerformed
+    private void jMenu25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu25ActionPerformed
 
-    }//GEN-LAST:event_jMenu20ActionPerformed
+    }//GEN-LAST:event_jMenu25ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -699,10 +778,12 @@ public class Bike extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu15;
     private javax.swing.JMenu jMenu16;
     private javax.swing.JMenu jMenu17;
-    private javax.swing.JMenu jMenu18;
-    private javax.swing.JMenu jMenu19;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu20;
+    private javax.swing.JMenu jMenu21;
+    private javax.swing.JMenu jMenu22;
+    private javax.swing.JMenu jMenu23;
+    private javax.swing.JMenu jMenu24;
+    private javax.swing.JMenu jMenu25;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
@@ -726,6 +807,11 @@ public class Bike extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
+    private javax.swing.JMenuItem jMenuItem24;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
